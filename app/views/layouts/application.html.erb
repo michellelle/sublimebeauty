@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -86,13 +85,13 @@
 <div id="about" class="container text-center">
   <h3>CLASSIC RIDES AMUSEMENTS</h3>
   <p><em>Family Owned and Operated!</em></p>
-  <p>CLASSIC RIDES AMUSEMENTS is a family-owned and operated carnival company complete with rides, games, and food. Owners Jerry Baque and Tom Baque have spent their entire life in the carnivlbusiness working for their aunt and uncle Bob and Cindy Swartwood, supervising, maintaing and improving units on Swartwood Amusement Co.  When Bob and Cindy made their decision to retire they sold the equipment to their nephews the Baque Brothers to continue the operaton under their own company names Baque Brothers and Classic Rides Amusements.  So with the help of their cousin Phillip Riggi, unle Jack Swartwood, wives Alicia and Diana, sonos Tommy and Eddie Baque and other key staff to continue the operation with the same excellence and proffessionalism that their customers and patrons have always enjoyed. </p>
+  <p>CLASSIC RIDES AMUSEMENTS is a family-owned and operated carnival company complete with rides, games, and food. Owners Jerry Baque and Tom Baque have spent their entire life in the carnivlbusiness working for their aunt and uncle Bob and Cindy Swartwood, supervising, maintaing and improving units on Swartwood Amusement Co.  When Bob and Cindy made their decision to retire they sold the equipment to their nephews the Baque Brothers to continue the operaton under their own company names Baque Brothers and Classic Rides Amusements.  So with the help of their cousin Phillip Riggi, unle Jack Swartwood, wives Alicia and Diana, sons Tommy and Eddie Baque and other key staff to continue the operation with the same excellence and proffessionalism that their customers and patrons have always enjoyed. </p>
   <br> 
   <div class="row">
     <div class="col-sm-4">
       <p class="text-center"><strong>Games</strong></p><br>
       <a href="#about" data-toggle="collapse">
-        <img src="http://www.classicridesamusements.com/center_joints.jpg" class="img-circle person" alt="Games" width="255" height="255">
+        <img src="http://www.classicridesamusements.com/center_joints.jpg" class="img-circle person" alt="Games" width="255" height="255">>
       </a>
       <div id="about" class="collapse">
         <p>Games</p>
@@ -218,28 +217,9 @@
 </div>
   
 <!-- Add Google Maps -->
-<div id="googleMap"></div>
-<div class="container-center"></div>
-
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script>
-var myCenter = new google.maps.LatLng(34.1240756,-117.6278786);
-function initialize() {
-var mapProp = {
-center:myCenter,
-zoom:12,
-scrollwheel:false,
-draggable:false,
-mapTypeId:google.maps.MapTypeId.ROADMAP
-};
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-var marker = new google.maps.Marker({
-position:myCenter,
-});
-marker.setMap(map);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+<div id="map-responsive" class="container-center">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105691.8425781176!2d-117.62787860836532!3d34.12407563016528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c35bf938112791%3A0xad6a7aad82f2f34b!2sRancho+Cucamonga%2C+CA!5e0!3m2!1sen!2sus!4v1464126913359" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
 
 <!-- Footer -->
 <footer class="text-center">
@@ -264,7 +244,7 @@ $(document).ready(function(){
     // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
     $('html, body').animate({
       scrollTop: $(hash).offset().top
-    }, 900, function(){
+    }, 300, function(){
    
       // Add hash (#) to URL when done scrolling (default click behavior)
       window.location.hash = hash;
