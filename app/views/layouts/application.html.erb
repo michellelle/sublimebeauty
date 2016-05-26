@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -90,10 +91,10 @@
   <div class="row">
     <div class="col-sm-4">
       <p class="text-center"><strong>Games</strong></p><br>
-      <a href="#about" data-toggle="collapse">
-        <img src="http://www.classicridesamusements.com/center_joints.jpg" class="img-circle person" alt="Games" width="255" height="255">>
+      <a href="about" data-toggle="collapse" aria-expanded="true">
+        <img src="http://www.classicridesamusements.com/center_joints.jpg" class="img-circle person" alt="Games" width="255" height="255">
       </a>
-      <div id="about" class="collapse">
+      <div id="about" class="collapsed" aria-expanded="true">
         <p>Games</p>
         <p>Classic midway games include duck ponds, catching gold fish, basketball, and derby races.</p>
         <p>Upgrade or collect licensed prizes and pictures.</p>
@@ -101,10 +102,10 @@
     </div>
     <div class="col-sm-4">
       <p class="text-center"><strong>Refreshments</strong></p><br>
-      <a href="#about2" data-toggle="collapse">
+      <a href="about2" data-toggle="collapse" aria-expanded="true">
         <img src="http://s8.favim.com/orig/72/carnival-photography-vintage-Favim.com-725629.jpg" class="img-circle person" alt="Candy wagon" width="255" height="255">
       </a>
-      <div id="about2" class="collapse">
+      <div id="about2" class="collapsed" aria-expanded="true">
         <p>Refreshments</p>
         <p>Carnival food and treats.</p>
         <p>Cotton candy, snow cones, soda, and delicious food.</p>
@@ -112,10 +113,10 @@
     </div>
     <div class="col-sm-4">
       <p class="text-center"><strong>Classic rides</strong></p><br>
-      <a href="#about3" data-toggle="collapse">
+      <a href="about3" data-toggle="collapse" aria-expanded="true">
         <img src="http://www.classicridesamusements.com/publishImages/Blank-1~~element64.jpg" class="img-circle person" alt="Carnival at Night" width="255" height="255">
       </a>
-      <div id="about3" class="collapse">
+      <div id="about3" class="collapsed" aria-expanded="true">
         <p>CLassic Rides</p>
         <p>Experience Southern California's very own carnival park.</p>
         <p>Great environment with safe and fun rides or games, best weekend entertainment.</p>
@@ -155,7 +156,8 @@
     </div>
   </div>
   
-<div id="#more" class="container-center">
+<div id="more" class="container-center">
+  
   <h2>Rides and Games</h2>
   <p>Classic ferris-wheels and fun house, thrill rides and other various midway rides. Fun games with great prizes from sport to skill test fun.</p>            
   <div class="row">
