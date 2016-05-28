@@ -18,16 +18,17 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <%= link_to 'Classic Rides Amusements', root_path, class: "navbar-brand" %>
+      <%= link_to 'Classic Rides Amusements', root_path, class: 'navbar-brand' %>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="collapse navbar-collapse" id="main-nav-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "About", "#" %></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#more">More</a></li> 
       </ul>
@@ -154,6 +155,7 @@
       </div>  
     </div>
   </div>
+</div>  
 
 <!-- Add Google Maps -->
 <div id="googleMap"></div>
