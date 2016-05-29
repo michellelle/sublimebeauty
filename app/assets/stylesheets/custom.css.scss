@@ -26,34 +26,18 @@ body {
 
 /* On hover, the links will turn white */
 .navbar-nav li a:hover {
-    color: #fff !important;
+    color: #ffff80;
 }
 
 /* The active link */
 .navbar-nav li.active a {
-    color: #fff !important;
-    background-color:#29292c !important;
+    color: #ffff80;
+    background-color:#ffff80;
 }
 
 /* Remove border color from the collapsible button */
 .navbar-default .navbar-toggle {
     border-color: transparent;
-}
-
-/* Dropdown */
-.open .dropdown-toggle {
-    color: #fff ;
-    background-color: #555 !important;
-}
-
-/* Dropdown links */
-.dropdown-menu li a {
-    color: #000 !important;
-}
-
-/* On hover, the dropdown links will turn yellow */
-.dropdown-menu li a:hover {
-    background-color: yellow !important;
 }
 
 .carousel-inner img {
